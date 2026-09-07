@@ -54,3 +54,4 @@
 - **Pontos Fortes:** O agente **ORIENTA** manteve 100% de precisão nos testes de segurança, bloqueando injeções de prompt e recusando requisições fora da sua área de atuação.
 - **Execução Local:** O uso da infraestrutura local via Ollama garantiu baixo tempo de resposta, privacidade total dos dados e custo zero de API durante a fase de desenvolvimento e testes.
 
+```
