@@ -1,8 +1,5 @@
 ---
 
-### `04-metricas.md`
-
-```markdown
 # Avaliação e Métricas
 
 ## Métricas de Qualidade
