@@ -78,14 +78,14 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-[x] Restrição estrita ao contexto fornecido
-[x] Conversa guiada por etapas
-[x] Diagnóstico progressivo do perfil
-[x] Mapeamento dinâmico de competências
-[x] Recomendações acionáveis por etapas
-[x] Isolamento de dados e bloqueio de prompt injection
-[x] Registro contínuo em históricos
-[x] Verificação e bloqueio de dados sensíveis
+[x] Restrição estrita ao contexto fornecido  
+[x] Conversa guiada por etapas  
+[x] Diagnóstico progressivo do perfil  
+[x] Mapeamento dinâmico de competências  
+[x] Recomendações acionáveis por etapas  
+[x] Isolamento de dados e bloqueio de prompt injection  
+[x] Registro contínuo em históricos  
+[x] Verificação e bloqueio de dados sensíveis  
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
