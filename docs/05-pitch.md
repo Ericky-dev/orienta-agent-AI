@@ -1,9 +1,15 @@
 # Pitch (3 minutos)
 
-> [!TIP]
-> Você pode usar alguns slides pra apoiar no seu Pitch e mostrar sua solução na prática.
+> # Estrutura do Pitch
+>|Tempo|Seção|O que Falar|
+> |:---:|:---:|:---:|    
+> |0:00 - 0:30 | Problema | A dor que o Orienta resolve|
+> |0:30 - 1:30 | Solução  | Como o Orienta Resolve |
+> |1:30 - 2:30 | Demo     | Funcionamento |
+> |2:30 - 3:30 | Diferencial | Inovação |   
+> 
  
-## Roteiro Sugerido
+## Roteiro do Agente Orienta
 
 ### 1. O Problema (30 seg)
 > Qual dor do cliente você resolve?
