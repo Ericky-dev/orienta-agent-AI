@@ -22,7 +22,10 @@ ollama serve
 streamlit run ./src/orienta.py
 
 ## Evidências
-<img width="2526" height="1108" alt="image" src="assets/Orienta-1.png" />
+
+
+<img width="1366" height="601" alt="Orienta-1" src="https://github.com/user-attachments/assets/9330e6d2-3a06-487d-8e48-bf1fdafff694" />
+
 
 
 <img width="2526" height="1108" alt="image" src="https://github.com/user-attachments/assets/4d1df5a2-9a1a-4ded-bee2-f06b38e1f839" />
