@@ -160,7 +160,11 @@ streamlit run ./src/orienta.py
 <img width="1366" height="601" alt="Orienta-2" src="https://github.com/user-attachments/assets/27c9a287-f123-4478-9fc7-5d6609593cc0" />
 
 
+## 🎥 Vídeo de Demonstração
 
+Confira a demonstração completa do agente **ORIENTA** em funcionamento, com o passo a passo da interface e respostas em tempo real:
+
+▶️ [Assistir ao Vídeo do ORIENTA no Google Drive](https://drive.google.com/file/d/1TgrI3BmUvXEY3Ylip_cNSMhPirmnyJGY/view?usp=drive_link)
 
 
 
