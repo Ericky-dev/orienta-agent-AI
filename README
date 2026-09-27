@@ -35,15 +35,17 @@ O agente **não substitui um orientador humano**, mas funciona como um apoio int
 
 O ORIENTA é composto por:
 
-* **Interface de chat** (ex: Streamlit ou Gradio)
-* **LLM (IA Generativa)** para interpretação e geração de respostas
+* **Interface de chat** 
+* **Modelo LLM Local:** Ollama (`gemma:2b`)** para interpretação e geração de respostas
+* **Linguagem:** Python 3
+* **Persistência Local:** CSV (`histórico_atendimento.csv`) e JSON(`data/`)
 * **Base de conhecimento** com informações estruturadas
 * **Camada de regras** para evitar respostas incoerentes ou fora de escopo
 
 Fluxo simplificado:
 
-```
-Usuário → Interface → LLM + Regras → Base de Conhecimento → Resposta
+```text
+Usuário → Interface  Streamlit → LLM (Ollama/Gema) + Regras/RAG → Resposta
 ```
 
 ---
@@ -113,22 +115,18 @@ Dentro da pasta `src/` existe um `README.md` específico explicando:
 ## 🗂️ Estrutura do Repositório
 
 ```
-📁 orienta/
-│
-├── 📄 README.md              # Visão geral do projeto (este arquivo)
-│
-├── 📁 src/                   # Código da aplicação
-│   ├── README.md             # Instruções técnicas de execução
-│   ├── app.py
-│   ├── agente.py
-│   ├── config.py
-│   └── requirements.txt
-│
-├── 📁 data/                  # Base de conhecimento
-├── 📁 docs/                  # Documentação detalhada
-├── 📁 assets/                # Imagens e diagramas
-└── 📁 examples/              # Exemplos e referências
+orienta/
+├── assets/                  # Imagens e evidências de execução
+├── data/                    # Base de conhecimento e perfis JSON
+├── docs/                    # Documentação técnica (prompts, pitch, testes)
+├── src/
+│   └── orienta.py           # Código principal da aplicação
+├── .gitignore
+├── README.md                # Documentação principal
+└── requirements.txt         # Dependências do projeto
 ```
+
+
 
 ---
 
