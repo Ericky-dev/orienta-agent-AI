@@ -27,6 +27,7 @@ streamlit run ./src/orienta.py
 
 <img width="2526" height="1108" alt="image" src="https://github.com/user-attachments/assets/4d1df5a2-9a1a-4ded-bee2-f06b38e1f839" />
 
+<img width="2526" height="1108" alt="image" src="https://github.com/user-attachments/assets/Orienta-1.png" />
 
 
 
