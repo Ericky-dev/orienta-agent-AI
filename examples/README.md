@@ -1,11 +1,8 @@
 # 📂 Examples – Agente ORIENTA
 
-Esta pasta contém **exemplos de uso, cenários simulados e testes de interação**
-do agente **ORIENTA (Agente Inteligente de Orientação Profissional e Carreira)**.
+Esta pasta contém **exemplos de uso, cenários simulados e testes de interação** do agente **ORIENTA (Agente Inteligente de Orientação Profissional e Carreira)**.
 
-Os arquivos aqui servem como **referência prática** para validar o comportamento
-do agente, testar prompts e garantir que as regras definidas no projeto estão
-sendo respeitadas.
+Os arquivos aqui servem como **referência prática** para validar o comportamento do agente, testar prompts e garantir que as regras definidas no projeto estão sendo respeitadas.
 
 ---
 
@@ -22,38 +19,32 @@ sendo respeitadas.
 
 Nesta pasta podem existir arquivos com:
 
-- Simulações de entrevistas iniciais
-- Perguntas sobre escolha de área profissional
-- Orientações de carreira baseadas no perfil informado
-- Perguntas fora do escopo (para testar limites do agente)
-- Casos de incerteza ou informação insuficiente
+- Simulações de conversas e atendimentos iniciais
+- Dúvidas sobre escolha de área profissional e transição de carreira
+- Orientações de plano de ação baseadas no perfil do RAG
+- Perguntas fora de escopo (para testar limites do agente)
+- Situações de indecisão ou falta de tempo do usuário
+
+### 📋 Estrutura recomendada para os exemplos:
+- **Entrada (Pergunta do Usuário):** A provocação ou dúvida enviada ao agente.
+- **Resposta Esperada do ORIENTA:** O comportamento ideal em concordância com o prompt do sistema.
+- **Análise / Observação:** Breve nota explicando por que aquela resposta é adequada (ou quais regras do prompt foram ativadas).
 
 ---
 
+## 📌 Relação com Outras Pastas
 
-## Cada arquivo pode conter:
-- Pergunta do usuário
-- Resposta esperada do ORIENTA
-- Observações sobre comportamento correto ou incorreto
+- `docs/03-prompts.md` → Define as regras e instruções da persona do agente.
+- `docs/04-metricas.md` → Avalia se as respostas dos exemplos atendem aos critérios de qualidade.
+- `src/` → Código da aplicação que executa os prompts e carrega a base local em `data/`.
 
----
-
-## 📌 Relação com outras pastas
-
-- `docs/03-prompts.md` → define as regras e instruções do agente  
-- `docs/04-metricas.md` → avalia se os exemplos atendem aos critérios de qualidade  
-- `src/` → implementação do agente que deve seguir estes exemplos  
-
-Os exemplos **não são código**, mas **guias de comportamento**.
+*Os arquivos desta pasta não são código executável, mas guias de validação de comportamento.*
 
 ---
 
 ## ✅ Boas Práticas
 
-- Manter exemplos claros e objetivos
-- Evitar respostas longas ou genéricas
-- Garantir alinhamento com o escopo de orientação profissional
-- Atualizar exemplos sempre que o prompt for ajustado
-
----
-
+- Manter exemplos claros, concisos e aplicáveis ao contexto real de orientação de carreira.
+- Evitar respostas genéricas ou excessivamente longas.
+- Garantir o alinhamento rigoroso com o escopo do projeto (bloqueio de temas não relacionados).
+- Atualizar os cenários sempre que o prompt de sistema ou os arquivos em `data/` forem ajustados.
