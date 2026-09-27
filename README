@@ -36,7 +36,7 @@ O agente **não substitui um orientador humano**, mas funciona como um apoio int
 O ORIENTA é composto por:
 
 * **Interface de chat** 
-* **Modelo LLM Local:** Ollama (`gemma:2b`)** para interpretação e geração de respostas
+* **Modelo LLM Local:** Ollama (`gemma:2b`) para interpretação e geração de respostas
 * **Linguagem:** Python 3
 * **Persistência Local:** CSV (`histórico_atendimento.csv`) e JSON(`data/`)
 * **Base de conhecimento** com informações estruturadas
@@ -99,19 +99,6 @@ Critérios de avaliação do agente:
 
 ---
 
-## 🚀 Aplicação
-
-O código da aplicação está localizado na pasta `src/`.
-
-📌 **Importante:**
-Dentro da pasta `src/` existe um `README.md` específico explicando:
-
-* Estrutura do código
-* Dependências
-* Como rodar o projeto
-
----
-
 ## 🗂️ Estrutura do Repositório
 
 ```
@@ -129,28 +116,41 @@ orienta/
 
 # Passo a Passo de Execução do Agente ORIENTA
 
-```bash
- 1. Instalar Ollama (ollama.com)
- 2. Baixar um modelo leve(aqui utilizei o gemma:2b)
- ollama pull gemma:2b
+## 1. Configurar o Ollama
 
- 3. Testar se funciona
- ollama run gemma:2b "Olá"
+```bash
+
+Instalar Ollama (ollama.com)
+
+Baixar o modelo leve gemma:2b
+
+ollama pull gemma:2b
+
 ```
 
-## Código Completo
-Todo Código Completo está no arquivo `orienta.py`. 
+## 2.Instalar Dependências
 
-## Como executar
 ```bash
-1. Instalar dependências
- pip install -r requirements.txt
+
+pip install -r requirements.txt
+
 ```
-## Garantir que o ollama está funcionando
+
+## 3. Garantir que o Ollama está em execução
+
+```bash
+
 ollama serve
 
-## Executar a aplicação
+```
+
+## 4. Executar a aplicação
+
+```bash
+
 streamlit run ./src/orienta.py
+
+```
 
 ## Evidências
 
