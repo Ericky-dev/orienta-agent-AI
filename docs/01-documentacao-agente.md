@@ -55,9 +55,9 @@ mantém uma postura humana, acolhedora e confiável.
 
 ```mermaid
 flowchart TD
-    A[Usuário] -->|Mensagem| B["Streamlit (Interface)"]
-    B --> |Pipeline Python | C[Ollama - Local LLM] 
-    C <-->|Contexto Dinâmico| D["Base de Conhecimento (data/*.json e *.csv)"]
+    A[Usuário] -->|Mensagem| B[Streamlit Interface]
+    B --> |Pipeline Python | C[Ollama - LLM Local Gemma:2b] 
+    C <-->|Contexto Dinâmico| D[Base de Conhecimento (data/*.json e *.csv]
     C --> E[Módulo de Validação e Trava de Escopo]
     E -->|Resposta Validada| F[Usuário]
 ```
@@ -67,8 +67,8 @@ flowchart TD
 | Componente | Descrição |
 |------------|-----------|
 | Interface | [Streamlit](https://streamlit.io/) |
-| LLM | ollama (local) |
-| Base de Conhecimento | JSON/CSV mockados na pasta `data` |
+| LLM Local | ollama (gemma:2b) |
+| Base de Conhecimento | Arquivos JSON/CSV  na pasta `data` |
 |Linguagem de Backend  | Python 3.x
 
 
@@ -87,13 +87,11 @@ flowchart TD
 [x] Registro contínuo em históricos  
 [x] Verificação e bloqueio de dados sensíveis  
 
-### Limitações Declaradas
+### Limitações Declaradas (Guardrails)
 > O que o agente NÃO faz?
 
-- O agente não escolhe a carreira
-- Não substitui um orientador humano
-- Não coleta dados sensíveis 
-- Não atua fora do escopo de carreira
-- Não força escolhas ou caminhos
-- Não fornece aconselhamento legal 
-- Não faz diagnósticos psicológicos
+- O agente não toma decisões nem escolhe a carreira pelo usuário.
+- Não substitui um orientador de carreira ou psicólogo humano.
+- Não solicita nem armazena dados pessoais sensíveis ou senhas.
+- Não atua fora do escopo de desenvolvimento profissional.
+- Não garante promessas imediatas de emprego ou faixa salarial.
