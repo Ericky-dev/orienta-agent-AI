@@ -78,7 +78,7 @@ https://drive.google.com/file/d/1uERk5Uc8MGXlnTG7-ynJP2DzYwTSCne8/view?usp=drive
 # Link do Vídeo que fala da Solução que o Orienta dá ao Usuário
 https://drive.google.com/file/d/1skowdM-cyAjPEHnr5wnttjeZa-M5M3Mr/view?usp=drive_link
 
-🎥 [Assista ao vídeo do Pitch e Demonstração do Agente ORIENTA no Google Drive](https://drive.google.com/file/d/1TgrI3BmUvXEY3Ylip_cNSMhPirmnyJGY/view?usp=drive_link)
+🎥 Assista ao vídeo do Pitch e Demonstração do Agente ORIENTA no Google Drive(https://drive.google.com/file/d/1TgrI3BmUvXEY3Ylip_cNSMhPirmnyJGY/view?usp=drive_link)
 
 # Link do Vídeo que Fala do Diferencial e Impacto do Projeto Orienta
 https://drive.google.com/file/d/1Gowvei7ArN24EkXu29fG1r9uQCWwVuGn/view?usp=drive_link
