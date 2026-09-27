@@ -2,7 +2,9 @@
 
 ```bash
  1. Instalar Ollama (ollama.com)
- 2. Baixar um modelo leve(aqui utilizei o gemma:2b
+ 2. Baixar um modelo leve(aqui utilizei o gemma:2b)
+ ollama pull gemma:2b
+
  3. Testar se funciona
  ollama run gemma:2b "Olá"
 ```
@@ -13,7 +15,7 @@ Todo Código Completo está no arquivo `orienta.py`.
 ## Como executar
 ```bash
 1. Instalar dependências
-2. pip install -r requirements.txt
+ pip install -r requirements.txt
 ```
 ## Garantir que o ollama está funcionando
 ollama serve
@@ -25,8 +27,6 @@ streamlit run ./src/orienta.py
 
 
 <img width="1366" height="601" alt="Orienta-1" src="https://github.com/user-attachments/assets/9330e6d2-3a06-487d-8e48-bf1fdafff694" />
-
-
 
 <img width="1366" height="601" alt="Orienta-2" src="https://github.com/user-attachments/assets/27c9a287-f123-4478-9fc7-5d6609593cc0" />
 
