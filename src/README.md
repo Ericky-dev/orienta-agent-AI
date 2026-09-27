@@ -8,7 +8,7 @@
 ```
 
 ## Código Completo
-Todo Código Completo está no arquivo `app.py`. 
+Todo Código Completo está no arquivo `orienta.py`. 
 
 ## Como executar
 ```bash
@@ -19,10 +19,10 @@ Todo Código Completo está no arquivo `app.py`.
 ollama serve
 
 ## Executar a aplicação
-streamlit run ./src/app.py
+streamlit run ./src/orienta.py
 
 ## Evidências
-<img width="2526" height="1108" alt="image" src="[assets/Orienta-1.png](https://github.com/user-attachments/assets/Orienta-1.png" />
+<img width="2526" height="1108" alt="image" src="https://github.com/user-attachments/assets/Orienta-1.png" />
 
 
 <img width="2526" height="1108" alt="image" src="https://github.com/user-attachments/assets/4d1df5a2-9a1a-4ded-bee2-f06b38e1f839" />
