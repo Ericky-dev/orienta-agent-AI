@@ -1,63 +1,65 @@
-# Base de Conhecimento
+# 📚 Base de Conhecimento e RAG Local
 
-## Dados Utilizados
+## 📊 Dados Utilizados
 
-| Arquivo | Formato | Para que serve no ORIENTA |
-|---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Registrar e contextualizar interações anteriores com o usuário |
-| `perfil_usuario.json` | JSON | Compreender o perfil, interesses e contexto do usuário |
-| `metas_usuario.json` | JSON | Definir e acompanhar objetivos de carreira e estudo |
-| `preferencias_usuario.csv` | CSV | Adaptar comunicação e sugestões ao estilo do usuário |
-| `habilidades_usuario.json` | JSON | Mapear competências técnicas e comportamentais do usuário | 
-| `feedback_usuario.csv` | CSV | Avaliar qualidade do atendimento e melhorar o ORIENTA |
-
----
-
-## Adaptações nos Dados
-
-> Você modificou ou expandiu os dados mockados? Descreva aqui.
-
-Sim.
-
-Os dados mockados foram modificados e expandidos para atender ao escopo do projeto do agente inteligente de orientação profissional e de carreira (ORIENTA).
-
-Foram adicionados novos arquivos na pasta data, incluindo perfil_usuario, historico_atendimentos, metas_usuario, preferencias_usuario, progresso_usuario, habilidades_usuario e feedback_usuario.
-
-Essas informações permitem que o agente compreenda melhor o perfil do usuário, acompanhe sua evolução e ofereça orientações mais precisas e personalizadas.
+| Arquivo | Formato | Função no Agente ORIENTA |
+|---------|---------|--------------------------|
+| `historico_atendimento.csv` | CSV | Registrar e contextualizar interações anteriores e sessões de chat |
+| `perfil_usuario.json` | JSON | Compreender o perfil, interesses, dados demográficos e contexto do usuário |
+| `metas_usuario.json` | JSON | Definir e acompanhar objetivos de carreira e estudo com prazos e status |
+| `preferencias_usuario.json` | JSON | Adaptar a comunicação, o ritmo e o tom das sugestões ao estilo do usuário |
+| `habilidades_usuario.json` | JSON | Mapear competências técnicas e soft skills validadas do usuário |
+| `progresso_usuario.json` | JSON | Registrar a evolução contínua, marcos alcançados e dificuldades identificadas |
+| `feedback_usuario.csv` | CSV | Avaliar a qualidade do atendimento e coletar notas de satisfação |
 
 ---
 
-## Estratégia de Integração
+## 🛠️ Adaptações e Expansão dos Dados
+
+Os dados mockados foram modificados e expandidos para atender ao escopo completo do projeto do agente inteligente de orientação profissional e de carreira (**ORIENTA**).
+
+Foram estruturados arquivos de suporte na pasta `data/`, incluindo perfil de usuário, histórico de atendimentos, metas, preferências, progresso, habilidades e feedbacks. Essas informações funcionam como a base RAG (Retrieval-Augmented Generation) local do agente, permitindo que a LLM compreenda o contexto individual, acompanhe a evolução do usuário e ofereça orientações personalizadas e precisas.
+
+---
+
+## ⚙️ Estratégia de Integração
 
 ### Como os dados são carregados?
-> Descreva como seu agente acessa a base de conhecimento.
 
-O agente ORIENTA acessa sua base de conhecimento em Python por meio da leitura de arquivos JSON e CSV armazenados na pasta data/, carregando essas informações em memória para personalizar e contextualizar as orientações oferecidas ao usuário.
+O agente **ORIENTA** acessa sua base de conhecimento em Python por meio da leitura de arquivos JSON e CSV armazenados no diretório `data/`, utilizando as bibliotecas nativas `json` e `pandas`. Os dados são carregados em memória para montar o payload de contexto dinâmico injetado a cada interação com o modelo.
 
 ```python
-import pandas as pd
 import json
+import pandas as pd
 
-perfil = json.load(open('./data/perfil_do_usuario.json'))
+# Carregamento seguro dos arquivos JSON da pasta data/
+with open('./data/perfil_usuario.json', encoding='utf-8') as f:
+    perfil = json.load(f)
+
+with open('./data/metas_usuario.json', encoding='utf-8') as f:
+    metas = json.load(f)
+
+with open('./data/habilidades_usuario.json', encoding='utf-8') as f:
+    habilidades = json.load(f)
+
+with open('./data/preferencias_usuario.json', encoding='utf-8') as f:
+    preferencias = json.load(f)
+
+with open('./data/progresso_usuario.json', encoding='utf-8') as f:
+    progresso = json.load(f)
+
+# Carregamento dos históricos e feedbacks em formato tabular (CSV)
 historico = pd.read_csv('./data/historico_atendimento.csv')
-metas = json.load(open('./data.metas_usuario.json'))
-habilidades = json.load(open('./data/habilidades_usuario.json'))
-preferencias = json.load(open('./data/preferencias_usuario.json'))
-progresso = json.load(open('./data/progresso_usuario.json'))
 feedback = pd.read_csv('./data/feedback_usuario.csv')
 
 
-```
+## Como os dados são usados no prompt?
+Os dados recuperados são consultados dinamicamente e injetados na estrutura da mensagem enviada ao modelo, garantindo que o ORIENTA personalize sua resposta com base nos objetivos e limitações do usuário.
 
+## ⚙️ Estrutura da Base de Conhecimento 
 
-### Como os dados são usados no prompt?
-> Os dados vão no system prompt? São consultados dinamicamente?
-> 
-Como abordagem inicial, os dados podem ser incorporados diretamente ao prompt para fornecer ao agente um contexto completo da situação do usuário. Já em arquiteturas mais avançadas, essas informações devem ser obtidas de forma dinâmica, permitindo maior flexibilidade, manutenção e evolução do sistema.
+# 1. Perfil do Usuário
 
-``` text
-
-Perfil do Usuario (data/perfil_do_usuario.json)
 {
   "nome": "João Silva",
   "idade": 22,
@@ -110,8 +112,7 @@ Perfil do Usuario (data/perfil_do_usuario.json)
   "observacoes_agente": "Usuário demonstra afinidade com tecnologia e perfil analítico, indicado para áreas técnicas de desenvolvimento."
 }
 
-
-Metas do Usuario (data/metas_usuario.json)
+# 2. Metas do Usuário (data/metas_usuario.json)
 {
   "usuario_id": "usr_001",
   "metas": [
@@ -135,7 +136,7 @@ Metas do Usuario (data/metas_usuario.json)
 }
 
 
-Histórico de Atendimento (data/historico_atendimento.csv)
+# 3. Histórico de Atendimento (data/historico_atendimento.csv)
 data,canal,tema,resumo,resolvido
 2025-09-15,chat,Orientacao de carreira,Usuario relatou indecisao profissional e iniciou diagnostico guiado,sim
 2025-09-22,chat,Perfil profissional,Agente identificou perfil analitico com interesse em tecnologia,sim
@@ -144,7 +145,7 @@ data,canal,tema,resumo,resolvido
 2025-10-25,chat,Acompanhamento de progresso,Plano ajustado conforme evolucao informada pelo usuario,sim
 
 
-Preferências do Usuario (data/preferencias_usuario.json)
+# 4.Preferências do Usuario (data/preferencias_usuario.json)
 {
   "usuario_id": "usr_001",
   "estilo_aprendizado": "pratico",
@@ -155,7 +156,7 @@ Preferências do Usuario (data/preferencias_usuario.json)
 }
 
 
-Progresso do Usuario (data/progresso_usuario.json)
+# 5.Progresso do Usuario (data/progresso_usuario.json)
 {
   "usuario_id": "usr_001",
   "progresso_geral": "moderado",
@@ -175,7 +176,7 @@ Progresso do Usuario (data/progresso_usuario.json)
 }
 
 
-feedback Usuario (data/feedback_usuario.csv)
+# 6. feedback Usuário (data/feedback_usuario.csv)
 data,canal,avaliacao,comentario
 2025-10-05,chat,5,Agente foi claro e ajudou a organizar minhas ideias
 2025-10-18,chat,4,Bom acompanhamento mas poderia sugerir mais exemplos praticos
@@ -183,34 +184,16 @@ data,canal,avaliacao,comentario
 
 ---
 
-## Exemplo de Contexto Montado
+## Exemplo de Contexto Montado para o Agente
 
-> Mostre um exemplo de como os dados são formatados para o agente.
+[CONTEXTO DO USUÁRIO]
+- Nome: João Silva
+- Área de Interesse Principal: Tecnologia
+- Nível de Experiência: Iniciante / Estudante
+- Disponibilidade de Estudos: 2 horas por dia (Período: Noite)
+- Estilo de Aprendizado: Prático (Exercícios curtos)
+- Meta Ativa: Concluir curso introdutório de programação (Prazo: 2026-03)
+- Status Atual: Demonstrando interesse em desenvolvimento com foco em lógica de programação.
 
-
-
-```text
-perfil_usuario = {
-    "nome": "Joao",
-    "area_interesse": "Tecnologia",
-    "nivel_experiencia": "iniciante"
-}
-
-metas_usuario = {
-    "metas": [
-        {
-            "descricao": "Concluir curso introdutorio de programacao",
-            "prazo": "2026-03",
-            "status": "em_andamento"
-        }
-    ]
-}
-
-preferencias_usuario = {
-    "estilo_aprendizado": "pratico",
-    "nivel_detalhamento": "medio"
-}
-```
 
 ...
-```
