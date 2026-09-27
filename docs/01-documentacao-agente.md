@@ -55,10 +55,9 @@ mantém uma postura humana, acolhedora e confiável.
 
 ```mermaid
 flowchart TD
-    A[Usuário] -->|Mensagem| B[Streamlit Interface]
+    A[Usuário] -->|Mensagem| B[Streamlit - Interface]
     B --> |Pipeline Python | C[Ollama - LLM Local Gemma:2b] 
-    C <-->|Contexto Dinâmico| D[Base de Conhecimento (data/*.json e *.csv]
-    C --> E[Módulo de Validação e Trava de Escopo]
+    C <-->|Contexto Dinâmico| D[Base de Conhecimento - JSON e CSV]
     E -->|Resposta Validada| F[Usuário]
 ```
 
