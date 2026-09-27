@@ -65,4 +65,4 @@ Reduz indecisão, aumenta clareza profissional e acelera a definição de próxi
 
 > Cole aqui o link do seu pitch (YouTube, Loom, Google Drive, etc.)
 
-[Link do vídeo]
+[Link do vídeo https://drive.google.com/file/d/1TgrI3BmUvXEY3Ylip_cNSMhPirmnyJGY/view?usp=drive_link]
