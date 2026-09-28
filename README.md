@@ -182,6 +182,20 @@ Confira a demonstração completa do agente **ORIENTA** em funcionamento, com o 
 
 ▶️ [Assistir ao Vídeo do ORIENTA no Google Drive](https://drive.google.com/file/d/1TgrI3BmUvXEY3Ylip_cNSMhPirmnyJGY/view?usp=drive_link)
 
+***
+
+---
+
+### 📌 Observação de Escopo
+
+Embora o foco estrutural do projeto tenha sido inicialmente voltado para a transição e evolução na área de **Tecnologia (TI)**, o agente foi expandido para fins de teste e validação com suporte a mais **4 grandes áreas profissionais**:
+
+- 💼 **Administração**
+- ⚙️ **Engenharia**
+- 📣 **Marketing**
+- 🩺 **Saúde**
+
+Essa expansão foi implementada na base de dados para demonstrar a versatilidade, a capacidade de adaptação do RAG local e o controle de contexto do agente frente a um leque profissional mais amplo, garantindo respostas assertivas e personalizadas para diferentes perfis de atuação.
 
 
 
