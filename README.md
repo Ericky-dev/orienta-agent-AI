@@ -160,6 +160,22 @@ streamlit run ./src/orienta.py
 <img width="1366" height="601" alt="Orienta-2" src="https://github.com/user-attachments/assets/27c9a287-f123-4478-9fc7-5d6609593cc0" />
 
 
+## 🔗 Links dos Vídeos 
+# Link do Vídeo que Fala do Problema que o Orienta Resolve
+https://drive.google.com/file/d/1uERk5Uc8MGXlnTG7-ynJP2DzYwTSCne8/view?usp=drive_link
+
+***
+
+# Link do Vídeo que fala da Solução que o Orienta dá ao Usuário
+https://drive.google.com/file/d/1skowdM-cyAjPEHnr5wnttjeZa-M5M3Mr/view?usp=drive_link
+
+***
+
+# Link do Vídeo que Fala do Diferencial e Impacto do Projeto Orienta
+https://drive.google.com/file/d/1Gowvei7ArN24EkXu29fG1r9uQCWwVuGn/view?usp=drive_link
+
+***
+
 ## 🎥 Vídeo de Demonstração
 
 Confira a demonstração completa do agente **ORIENTA** em funcionamento, com o passo a passo da interface e respostas em tempo real:
